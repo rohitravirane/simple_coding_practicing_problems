@@ -45,8 +45,8 @@ signed main() {
     cin >> t;
     while(t--) {
       solve();
-	  }
-	cout << endl;
+    }
+    cout << endl;
 }
 
 static const auto speedup = [](){
