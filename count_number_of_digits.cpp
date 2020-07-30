@@ -36,25 +36,38 @@ sim dor(const c&) { ris; }
 };
 #define imie(...) " [" << #__VA_ARGS__ ": " << (__VA_ARGS__) << "] "
 
+// Logarithmic Solution
 ll solve(ll n) {
-	ll count = 0;
-	while(n != 0) {
-		n /= 10;
-		++count;
-	}
-	return count;
+	return floor(log10(n) + 1);
 }
+
+// Recursive Solution
+//ll solve(ll n) {
+	//if(n == 0) 
+		//return 0;
+	//return 1 + solve(n/10);
+//}
+
+// Iterative Solution
+//ll solve(ll n) {
+	//ll count = 0;
+	//while(n != 0) {
+		//n /= 10;
+		//++count;
+	//}
+	//return count;
+//}
 
 signed main() {
     ll t;
     cin >> t;
     while(t--) {
-		  ll num;
-		  cin >> num;
-		  cout << solve(num);
-		  cout << endl;
+	ll num;
+	cin >> num;
+	cout << solve(num);
+	cout << endl;
     }
-	  cout << endl;
+    cout << endl;
 }
 
 static const auto speedup = [](){
