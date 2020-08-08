@@ -2,6 +2,7 @@
 #define ll unsigned long long int
 #define mod 10e9 + 7
 #define endl "\n"
+#define re(x, n) for(ll x = 0; x < n; ++x)
 #define pb push_back
 #define mk make_pair
 #define F first
